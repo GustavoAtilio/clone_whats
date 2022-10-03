@@ -13,15 +13,13 @@ class CallsPage extends StatelessWidget {
         top: 15,
         left: 10,
       ),
-      child: Expanded(
-        child: ListView(
-          children: const [
-            PhoneCustom(name: 'Gustavo', hour: '10:12'),
-            PhoneCustom(name: 'Marcelo', hour: '13:30'),
-            PhoneCustom(name: 'Hertom', hour: '16:40'),
-            PhoneCustom(name: 'Elisete', hour: '22:10'),
-          ],
-        ),
+      child: ListView(
+        children: const [
+          PhoneCustom(name: 'Gustavo', hour: '10:12'),
+          PhoneCustom(name: 'Marcelo', hour: '13:30'),
+          PhoneCustom(name: 'Hertom', hour: '16:40'),
+          PhoneCustom(name: 'Elisete', hour: '22:10'),
+        ],
       ),
     );
   }

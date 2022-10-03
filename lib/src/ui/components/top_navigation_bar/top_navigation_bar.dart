@@ -19,7 +19,7 @@ class TopNavigationBarCutom extends StatelessWidget {
             children: [
               GestureDetector(
                 onTap: () {
-                  Get.find<UserController>().setPage(0);
+                  Get.find<UserController>().setPage(page: 0);
                 },
                 child: const Padding(
                   padding: EdgeInsets.only(bottom: 5),
@@ -34,17 +34,17 @@ class TopNavigationBarCutom extends StatelessWidget {
               ),
               ItemNavigationCutom(
                 title: 'CONVERSAS',
-                page: 1,
+                page: 0,
                 userController: userController,
               ),
               ItemNavigationCutom(
                 title: 'STATUS',
-                page: 2,
+                page: 1,
                 userController: userController,
               ),
               ItemNavigationCutom(
                 title: 'CHAMADAS',
-                page: 3,
+                page: 2,
                 userController: userController,
               ),
             ],

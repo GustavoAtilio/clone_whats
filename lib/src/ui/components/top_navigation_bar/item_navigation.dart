@@ -18,7 +18,7 @@ class ItemNavigationCutom extends StatelessWidget {
   Widget build(BuildContext context) {
     final currentPage = userController.pageUser;
     return GestureDetector(
-      onTap: () => userController.setPage(page),
+      onTap: () => userController.setPage(page: page),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [

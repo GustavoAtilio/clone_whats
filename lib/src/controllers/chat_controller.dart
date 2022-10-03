@@ -5,13 +5,7 @@ import 'package:clone_whats/src/models/chat_model.dart';
 import 'package:clone_whats/src/repositories/chat_repository.dart';
 
 class ChatController extends GetxController {
-  late List<ChatModel> chats = [
-    ChatModel(
-      countMessage: 200,
-      nameChat: 'Grupo Name 04',
-      hour: '15:20',
-    ),
-  ];
+  late List<ChatModel> chats = [];
   final ChatRepository _chatRepository = ChatRepository();
   bool isLoading = false;
 

@@ -44,12 +44,15 @@ class BasePage extends StatelessWidget {
             const TopNavigationBarCutom(),
             Expanded(
               child: PageView(
+                onPageChanged: ((value) {
+                  userController.setPage(page: value, isGesture: true);
+                }),
                 controller: userController.pageController,
-                children: [
-                  Container(color: Theme.of(context).backgroundColor),
-                  const ChatPage(),
-                  const StatusPage(),
-                  const CallsPage(),
+                children: const [
+                  // Container(color: Theme.of(context).backgroundColor),
+                  ChatPage(),
+                  StatusPage(),
+                  CallsPage(),
                 ],
               ),
             ),
@@ -61,10 +64,10 @@ class BasePage extends StatelessWidget {
         floatingActionButton: GetBuilder<UserController>(
           builder: (userController) {
             IconData iconPage = Icons.message;
-            if (userController.pageUser == 2) {
+            if (userController.pageUser == 1) {
               iconPage = Icons.camera;
             }
-            if (userController.pageUser == 3) {
+            if (userController.pageUser == 2) {
               iconPage = Icons.phone_in_talk_sharp;
             }
             return FloatingActionButton(

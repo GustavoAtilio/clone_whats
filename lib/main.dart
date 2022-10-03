@@ -7,7 +7,6 @@ import 'src/ui/material_app_ui/material_app_ui.dart';
 
 void main() {
   singleton();
-  WidgetsFlutterBinding.ensureInitialized();
 
   runApp(const MaterialAppUI());
 }
